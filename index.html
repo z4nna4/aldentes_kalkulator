@@ -1,1 +1,272 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Menu</title>\n</head>\n<body>\n    <h1>Menu</h1>\n    <h2>Pizze</h2>\n    <ul>\n        <li>Margherita - 30 zł</li>\n        <li>Pepperoni - 35 zł</li>\n        <li>Hawajska - 40 zł</li>\n        <li>Vegetariana - 32 zł</li>\n    </ul>\n    <h2>Napoje</h2>\n    <ul>\n        <li>Cola - 5 zł</li>\n        <li>Sok pomarańczowy - 6 zł</li>\n        <li>Woda - 3 zł</li>\n    </ul>\n    <h2>Zestawy</h2>\n    <ul>\n        <li>Zestaw 1: Pizza + Napoje - 40 zł</li>\n        <li>Zestaw 2: Pizza + Napoje + Zestaw 1 - 60 zł</li>\n    </ul>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldente's Kalkulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <svg class="pizza-decoration pizza-1" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#E8432F"/>
+            <path d="M50 5 L95 95 L5 95 Z" fill="#D4371F"/>
+        </svg>
+        <svg class="pizza-decoration pizza-2" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#22C55E"/>
+            <path d="M50 5 L95 95 L5 95 Z" fill="#16A34A"/>
+        </svg>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="left-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="pizza">🍕 Pizza</button>
+                    <button class="tab-btn" data-tab="napoje">🥤 Napoje</button>
+                    <button class="tab-btn" data-tab="zestawy">🎁 Zestawy</button>
+                </div>
+
+                <div class="products-container">
+                    <!-- PIZZA -->
+                    <div id="pizza" class="tab-content active">
+                        <div class="product-item" data-name="Pizza Marinara" data-price="1000">
+                            <div class="product-info">
+                                <span class="product-name">Pizza Marinara</span>
+                                <span class="product-price">1000$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Pizza Funghi" data-price="1150">
+                            <div class="product-info">
+                                <span class="product-name">Pizza Funghi</span>
+                                <span class="product-price">1150$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Pizza Pancetta" data-price="1250">
+                            <div class="product-info">
+                                <span class="product-name">Pizza Pancetta</span>
+                                <span class="product-price">1250$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Pizza Cotto" data-price="1400">
+                            <div class="product-info">
+                                <span class="product-name">Pizza Cotto</span>
+                                <span class="product-price">1400$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Pizza Diavola" data-price="1500">
+                            <div class="product-info">
+                                <span class="product-name">Pizza Diavola</span>
+                                <span class="product-price">1500$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NAPOJE -->
+                    <div id="napoje" class="tab-content">
+                        <div class="product-item" data-name="Woda" data-price="50">
+                            <div class="product-info">
+                                <span class="product-name">Woda</span>
+                                <span class="product-price">50$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Cola" data-price="100">
+                            <div class="product-info">
+                                <span class="product-name">Cola</span>
+                                <span class="product-price">100$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Wino" data-price="550">
+                            <div class="product-info">
+                                <span class="product-name">Wino</span>
+                                <span class="product-price">550$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ZESTAWY -->
+                    <div id="zestawy" class="tab-content">
+                        <div class="product-item" data-name="Sycylijski Wieczor" data-price="4100">
+                            <div class="product-info">
+                                <span class="product-name">Sycylijski Wieczor</span>
+                                <span class="product-desc">2x pizza diavola, 1x pizza marinara, 2x lampka wina</span>
+                                <span class="product-price">4100$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Rodzinny Stol" data-price="5100">
+                            <div class="product-info">
+                                <span class="product-name">Rodzinny Stol</span>
+                                <span class="product-desc">2x pizza marinara, 2x pizza cotto, 1x pizza funghi, 3x cola, 2x woda</span>
+                                <span class="product-price">5100$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Wloska Uczta" data-price="5100">
+                            <div class="product-info">
+                                <span class="product-name">Wloska Uczta</span>
+                                <span class="product-desc">1x pizza marinara, 1x pizza funghi, 1x pizza cotto, 2x wino</span>
+                                <span class="product-price">5100$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Ognisty Zestaw" data-price="3600">
+                            <div class="product-info">
+                                <span class="product-name">Ognisty Zestaw</span>
+                                <span class="product-desc">2x pizza diavola, 1x pizza pancetta, 2x cola, 1x woda</span>
+                                <span class="product-price">3600$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Wieczor Przy Winie" data-price="2700">
+                            <div class="product-info">
+                                <span class="product-name">Wieczor Przy Winie</span>
+                                <span class="product-desc">1x pizza pancetta, 1x pizza marinara, 2x wino</span>
+                                <span class="product-price">2700$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Mocny Glod" data-price="4550">
+                            <div class="product-info">
+                                <span class="product-name">Mocny Glod</span>
+                                <span class="product-desc">2x pizza pancetta, 1x pizza diavola, 1x pizza cotto, 3x cola</span>
+                                <span class="product-price">4550$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Imprezowy Mix" data-price="6950">
+                            <div class="product-info">
+                                <span class="product-name">Imprezowy Mix</span>
+                                <span class="product-desc">2x pizza diavola, 2x pizza pancetta, 2x pizza cotto, 3x cola, 2x woda</span>
+                                <span class="product-price">6950$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Zestaw Rolki" data-price="4750">
+                            <div class="product-info">
+                                <span class="product-name">Zestaw Rolki</span>
+                                <span class="product-desc">2x pizza cotto, 1x pizza funghi, 1x pizza diavola, 5x cola</span>
+                                <span class="product-price">4750$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item" data-name="Zestaw Szefa" data-price="7600">
+                            <div class="product-info">
+                                <span class="product-name">Zestaw Szefa</span>
+                                <span class="product-desc">3x pizza diavola, 2x pizza cotto, 1x pizza funghi, 3x cola, 2x wino</span>
+                                <span class="product-price">7600$</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="btn-minus">−</button>
+                                <span class="quantity">0</span>
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <h2>Podsumowanie</h2>
+                <div class="summary-items" id="summary-items">
+                    <p class="empty-message">Brak pozycji w zamowieniu</p>
+                </div>
+                <div class="summary-total">
+                    <div class="total-line">
+                        <span>RAZEM:</span>
+                        <span class="total-amount">0$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
