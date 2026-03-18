@@ -3,38 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldente's Kalkulator</title>
+    <title>Aldente's Pizza Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background">
-        <svg class="pizza-decoration pizza-1" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45" fill="#E8432F"/>
-            <path d="M50 5 L95 95 L5 95 Z" fill="#D4371F"/>
+    <div class="background-pizzas">
+        <svg class="pizza pizza-red-1" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#C41E3A" stroke-width="2"/>
+            <circle cx="70" cy="70" r="15" fill="#FFD700"/>
+            <circle cx="130" cy="80" r="12" fill="#FFD700"/>
+            <circle cx="100" cy="120" r="14" fill="#FFD700"/>
+            <circle cx="80" cy="130" r="13" fill="#FFD700"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#C41E3A" stroke-width="2"/>
+            <line x1="100" y1="100" x2="20" y2="160" stroke="#C41E3A" stroke-width="2"/>
+            <line x1="100" y1="100" x2="180" y2="160" stroke="#C41E3A" stroke-width="2"/>
         </svg>
-        <svg class="pizza-decoration pizza-2" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45" fill="#22C55E"/>
-            <path d="M50 5 L95 95 L5 95 Z" fill="#16A34A"/>
+        
+        <svg class="pizza pizza-green-1" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+            <circle cx="70" cy="70" r="15" fill="#90EE90"/>
+            <circle cx="130" cy="80" r="12" fill="#90EE90"/>
+            <circle cx="100" cy="120" r="14" fill="#90EE90"/>
+            <circle cx="80" cy="130" r="13" fill="#90EE90"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#2D6A4F" stroke-width="2"/>
+            <line x1="100" y1="100" x2="20" y2="160" stroke="#2D6A4F" stroke-width="2"/>
+            <line x1="100" y1="100" x2="180" y2="160" stroke="#2D6A4F" stroke-width="2"/>
+        </svg>
+
+        <svg class="pizza pizza-red-2" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#C41E3A" stroke-width="2"/>
+            <circle cx="70" cy="70" r="15" fill="#FFD700"/>
+            <circle cx="130" cy="80" r="12" fill="#FFD700"/>
+            <circle cx="100" cy="120" r="14" fill="#FFD700"/>
+            <circle cx="80" cy="130" r="13" fill="#FFD700"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#C41E3A" stroke-width="2"/>
+            <line x1="100" y1="100" x2="20" y2="160" stroke="#C41E3A" stroke-width="2"/>
+            <line x1="100" y1="100" x2="180" y2="160" stroke="#C41E3A" stroke-width="2"/>
+        </svg>
+
+        <svg class="pizza pizza-green-2" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+            <circle cx="70" cy="70" r="15" fill="#90EE90"/>
+            <circle cx="130" cy="80" r="12" fill="#90EE90"/>
+            <circle cx="100" cy="120" r="14" fill="#90EE90"/>
+            <circle cx="80" cy="130" r="13" fill="#90EE90"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#2D6A4F" stroke-width="2"/>
+            <line x1="100" y1="100" x2="20" y2="160" stroke="#2D6A4F" stroke-width="2"/>
+            <line x1="100" y1="100" x2="180" y2="160" stroke="#2D6A4F" stroke-width="2"/>
         </svg>
     </div>
 
     <div class="container">
-        <div class="card">
-            <div class="left-section">
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="pizza">🍕 Pizza</button>
-                    <button class="tab-btn" data-tab="napoje">🥤 Napoje</button>
-                    <button class="tab-btn" data-tab="zestawy">🎁 Zestawy</button>
-                </div>
+        <div class="main-card">
+            <!-- HEADER -->
+            <div class="header">
+                <div class="flag">🇮🇹</div>
+                <h1>PIZZA</h1>
+                <p class="subtitle">KALKULATOR</p>
+                <p class="restaurant">Aldente's Restaurant</p>
+            </div>
 
-                <div class="products-container">
-                    <!-- PIZZA -->
-                    <div id="pizza" class="tab-content active">
+            <!-- MAIN CONTENT -->
+            <div class="content">
+                <!-- LEFT SECTION - MENU -->
+                <div class="left-section">
+                    <!-- PIZZA CATEGORY -->
+                    <div class="category-section">
+                        <div class="category-ribbon pizza-ribbon">🍕 PIZZA</div>
+                        
                         <div class="product-item" data-name="Pizza Marinara" data-price="1000">
-                            <div class="product-info">
-                                <span class="product-name">Pizza Marinara</span>
-                                <span class="product-price">1000$</span>
+                            <div class="product-header">
+                                <h3>Pizza Marinara</h3>
+                                <span class="price">1000$</span>
                             </div>
+                            <p class="product-desc">Sos pomidorowy, czosnek, oregano, oliwa z oliwek</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -43,10 +86,11 @@
                         </div>
 
                         <div class="product-item" data-name="Pizza Funghi" data-price="1150">
-                            <div class="product-info">
-                                <span class="product-name">Pizza Funghi</span>
-                                <span class="product-price">1150$</span>
+                            <div class="product-header">
+                                <h3>Pizza Funghi</h3>
+                                <span class="price">1150$</span>
                             </div>
+                            <p class="product-desc">Sos pomidorowy, ser mozzarella, pieczarki</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -55,10 +99,11 @@
                         </div>
 
                         <div class="product-item" data-name="Pizza Pancetta" data-price="1250">
-                            <div class="product-info">
-                                <span class="product-name">Pizza Pancetta</span>
-                                <span class="product-price">1250$</span>
+                            <div class="product-header">
+                                <h3>Pizza Pancetta</h3>
+                                <span class="price">1250$</span>
                             </div>
+                            <p class="product-desc">Sos pomidorowy, ser mozarella, pancetta</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -67,10 +112,11 @@
                         </div>
 
                         <div class="product-item" data-name="Pizza Cotto" data-price="1400">
-                            <div class="product-info">
-                                <span class="product-name">Pizza Cotto</span>
-                                <span class="product-price">1400$</span>
+                            <div class="product-header">
+                                <h3>Pizza Cotto</h3>
+                                <span class="price">1400$</span>
                             </div>
+                            <p class="product-desc">Sos pomidorowy, ser mozzarella, szynka gotowana</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -79,10 +125,11 @@
                         </div>
 
                         <div class="product-item" data-name="Pizza Diavola" data-price="1500">
-                            <div class="product-info">
-                                <span class="product-name">Pizza Diavola</span>
-                                <span class="product-price">1500$</span>
+                            <div class="product-header">
+                                <h3>Pizza Diavola</h3>
+                                <span class="price">1500$</span>
                             </div>
+                            <p class="product-desc">Sos pomidorowy, ser mozzarella, pikantne salami</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -91,13 +138,16 @@
                         </div>
                     </div>
 
-                    <!-- NAPOJE -->
-                    <div id="napoje" class="tab-content">
+                    <!-- NAPOJE CATEGORY -->
+                    <div class="category-section">
+                        <div class="category-ribbon napoje-ribbon">🥤 NAPOJE</div>
+                        
                         <div class="product-item" data-name="Woda" data-price="50">
-                            <div class="product-info">
-                                <span class="product-name">Woda</span>
-                                <span class="product-price">50$</span>
+                            <div class="product-header">
+                                <h3>Woda</h3>
+                                <span class="price">50$</span>
                             </div>
+                            <p class="product-desc">Woda źródlana gazowana / niegazowana</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -106,10 +156,11 @@
                         </div>
 
                         <div class="product-item" data-name="Cola" data-price="100">
-                            <div class="product-info">
-                                <span class="product-name">Cola</span>
-                                <span class="product-price">100$</span>
+                            <div class="product-header">
+                                <h3>Cola</h3>
+                                <span class="price">100$</span>
                             </div>
+                            <p class="product-desc">Napój gazowany o smaku coli</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -118,10 +169,11 @@
                         </div>
 
                         <div class="product-item" data-name="Wino" data-price="550">
-                            <div class="product-info">
-                                <span class="product-name">Wino</span>
-                                <span class="product-price">550$</span>
+                            <div class="product-header">
+                                <h3>Wino</h3>
+                                <span class="price">550$</span>
                             </div>
+                            <p class="product-desc">Wino z Toskanii, produkowane głównie ze szczepu sangiovese</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -130,14 +182,16 @@
                         </div>
                     </div>
 
-                    <!-- ZESTAWY -->
-                    <div id="zestawy" class="tab-content">
+                    <!-- ZESTAWY CATEGORY -->
+                    <div class="category-section">
+                        <div class="category-ribbon zestawy-ribbon">🎁 ZESTAWY</div>
+                        
                         <div class="product-item" data-name="Sycylijski Wieczor" data-price="4100">
-                            <div class="product-info">
-                                <span class="product-name">Sycylijski Wieczor</span>
-                                <span class="product-desc">2x pizza diavola, 1x pizza marinara, 2x lampka wina</span>
-                                <span class="product-price">4100$</span>
+                            <div class="product-header">
+                                <h3>Sycylijski Wieczór</h3>
+                                <span class="price">4100$</span>
                             </div>
+                            <p class="product-desc">2x Pizza Diavola, 1x Pizza Marinara, 2x Lampka wina</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -146,11 +200,11 @@
                         </div>
 
                         <div class="product-item" data-name="Rodzinny Stol" data-price="5100">
-                            <div class="product-info">
-                                <span class="product-name">Rodzinny Stol</span>
-                                <span class="product-desc">2x pizza marinara, 2x pizza cotto, 1x pizza funghi, 3x cola, 2x woda</span>
-                                <span class="product-price">5100$</span>
+                            <div class="product-header">
+                                <h3>Rodzinny Stół</h3>
+                                <span class="price">5100$</span>
                             </div>
+                            <p class="product-desc">2x Pizza Marinara, 2x Pizza Cotto, 1x Pizza Funghi, 3x Cola, 2x Woda</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -159,11 +213,11 @@
                         </div>
 
                         <div class="product-item" data-name="Wloska Uczta" data-price="5100">
-                            <div class="product-info">
-                                <span class="product-name">Wloska Uczta</span>
-                                <span class="product-desc">1x pizza marinara, 1x pizza funghi, 1x pizza cotto, 2x wino</span>
-                                <span class="product-price">5100$</span>
+                            <div class="product-header">
+                                <h3>Włoska Uczta</h3>
+                                <span class="price">5100$</span>
                             </div>
+                            <p class="product-desc">1x Pizza Marinara, 1x Pizza Funghi, 1x Pizza Cotto, 2x Wino</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -172,11 +226,11 @@
                         </div>
 
                         <div class="product-item" data-name="Ognisty Zestaw" data-price="3600">
-                            <div class="product-info">
-                                <span class="product-name">Ognisty Zestaw</span>
-                                <span class="product-desc">2x pizza diavola, 1x pizza pancetta, 2x cola, 1x woda</span>
-                                <span class="product-price">3600$</span>
+                            <div class="product-header">
+                                <h3>Ognisty Zestaw</h3>
+                                <span class="price">3600$</span>
                             </div>
+                            <p class="product-desc">2x Pizza Diavola, 1x Pizza Pancetta, 2x Cola, 1x Woda</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -185,11 +239,11 @@
                         </div>
 
                         <div class="product-item" data-name="Wieczor Przy Winie" data-price="2700">
-                            <div class="product-info">
-                                <span class="product-name">Wieczor Przy Winie</span>
-                                <span class="product-desc">1x pizza pancetta, 1x pizza marinara, 2x wino</span>
-                                <span class="product-price">2700$</span>
+                            <div class="product-header">
+                                <h3>Wieczór przy winie</h3>
+                                <span class="price">2700$</span>
                             </div>
+                            <p class="product-desc">1x Pizza Pancetta, 1x Pizza Marinara, 2x Wino</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -198,11 +252,11 @@
                         </div>
 
                         <div class="product-item" data-name="Mocny Glod" data-price="4550">
-                            <div class="product-info">
-                                <span class="product-name">Mocny Glod</span>
-                                <span class="product-desc">2x pizza pancetta, 1x pizza diavola, 1x pizza cotto, 3x cola</span>
-                                <span class="product-price">4550$</span>
+                            <div class="product-header">
+                                <h3>Mocny Głód</h3>
+                                <span class="price">4550$</span>
                             </div>
+                            <p class="product-desc">2x Pizza Pancetta, 1x Pizza Diavola, 1x Pizza Cotto, 3x Cola</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -211,11 +265,11 @@
                         </div>
 
                         <div class="product-item" data-name="Imprezowy Mix" data-price="6950">
-                            <div class="product-info">
-                                <span class="product-name">Imprezowy Mix</span>
-                                <span class="product-desc">2x pizza diavola, 2x pizza pancetta, 2x pizza cotto, 3x cola, 2x woda</span>
-                                <span class="product-price">6950$</span>
+                            <div class="product-header">
+                                <h3>Imprezowy Mix</h3>
+                                <span class="price">6950$</span>
                             </div>
+                            <p class="product-desc">2x Pizza Diavola, 2x Pizza Pancetta, 2x Pizza Cotto, 3x Cola, 2x Woda</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -224,11 +278,11 @@
                         </div>
 
                         <div class="product-item" data-name="Zestaw Rolki" data-price="4750">
-                            <div class="product-info">
-                                <span class="product-name">Zestaw Rolki</span>
-                                <span class="product-desc">2x pizza cotto, 1x pizza funghi, 1x pizza diavola, 5x cola</span>
-                                <span class="product-price">4750$</span>
+                            <div class="product-header">
+                                <h3>Zestaw Rolki</h3>
+                                <span class="price">4750$</span>
                             </div>
+                            <p class="product-desc">2x Pizza Cotto, 1x Pizza Funghi, 1x Pizza Diavola, 5x Cola</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -237,11 +291,11 @@
                         </div>
 
                         <div class="product-item" data-name="Zestaw Szefa" data-price="7600">
-                            <div class="product-info">
-                                <span class="product-name">Zestaw Szefa</span>
-                                <span class="product-desc">3x pizza diavola, 2x pizza cotto, 1x pizza funghi, 3x cola, 2x wino</span>
-                                <span class="product-price">7600$</span>
+                            <div class="product-header">
+                                <h3>Zestaw Szefa</h3>
+                                <span class="price">7600$</span>
                             </div>
+                            <p class="product-desc">3x Pizza Diavola, 2x Pizza Cotto, 1x Pizza Funghi, 3x Cola, 2x Wino</p>
                             <div class="quantity-controls">
                                 <button class="btn-minus">−</button>
                                 <span class="quantity">0</span>
@@ -250,17 +304,22 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="right-section">
-                <h2>Podsumowanie</h2>
-                <div class="summary-items" id="summary-items">
-                    <p class="empty-message">Brak pozycji w zamowieniu</p>
-                </div>
-                <div class="summary-total">
-                    <div class="total-line">
-                        <span>RAZEM:</span>
-                        <span class="total-amount">0$</span>
+                <!-- RIGHT SECTION - SUMMARY -->
+                <div class="right-section">
+                    <h2>Podsumowanie</h2>
+                    <div class="divider"></div>
+                    
+                    <div class="summary-items" id="summary-items">
+                        <p class="empty-message">Brak pozycji<br>w zamówieniu</p>
+                    </div>
+
+                    <div class="summary-footer">
+                        <div class="divider"></div>
+                        <div class="total-section">
+                            <span class="total-label">RAZEM:</span>
+                            <span class="total-amount">0$</span>
+                        </div>
                     </div>
                 </div>
             </div>
